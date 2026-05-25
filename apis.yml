@@ -1,0 +1,454 @@
+aid: fastmcp
+name: FastMCP
+description: >-
+  FastMCP is the fast, Pythonic framework for building Model Context Protocol (MCP) servers, clients,
+  and apps. Originally created by Jeremiah Lowin and maintained by PrefectHQ, FastMCP 1.0 was
+  adopted into the official Anthropic MCP Python SDK in 2024, and the standalone FastMCP project
+  (now at v3) remains the most widely used way to ship MCP servers in Python — the project reports
+  powering roughly 70% of MCP servers across all languages. FastMCP turns ordinary Python functions
+  into MCP tools, resources, prompts, and apps via decorators, auto-generates JSON Schemas from
+  type hints, handles transport negotiation (stdio, Streamable HTTP, SSE), and ships first-class
+  OAuth/OIDC authentication, server composition and proxying, OpenAPI/FastAPI import, a CLI for
+  running and installing servers into Claude Desktop / Claude Code / Cursor / ChatGPT / Gemini CLI /
+  Goose, middleware, lifespan management, elicitation, sampling, progress reporting, OpenTelemetry,
+  and a client library and apps runtime for building interactive UIs rendered inside MCP host
+  conversations.
+kind: contract
+position: Producing
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- MCP
+- Model Context Protocol
+- Python
+- Framework
+- Open Source
+- AI Agents
+- Tools
+- Resources
+- Prompts
+- LLMs
+- Anthropic
+created: '2026-05-25'
+modified: '2026-05-25'
+url: https://raw.githubusercontent.com/api-evangelist/fastmcp/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+- aid: fastmcp:fastmcp-server
+  name: FastMCP Server
+  description: >-
+    The FastMCP Server is the Python entry point for exposing tools, resources, prompts, and apps to
+    any Model Context Protocol client. Developers instantiate a `FastMCP` server object and register
+    components with decorators (`@mcp.tool`, `@mcp.resource`, `@mcp.prompt`). Schemas are generated
+    automatically from Python type hints, with built-in support for dependency injection, middleware,
+    lifespan management, context, structured logging, progress reporting, elicitation, authorization,
+    component visibility, pagination, namespace transforms, and OpenTelemetry. Servers can be composed
+    via mounting and proxying, and exposed over stdio, Streamable HTTP, or SSE transports.
+  humanURL: https://gofastmcp.com/servers/server
+  baseURL: ''
+  tags:
+  - MCP
+  - Server
+  - Tools
+  - Resources
+  - Prompts
+  - Python
+  - Framework
+  properties:
+  - type: Documentation
+    url: https://gofastmcp.com/servers/server
+  - type: Documentation
+    name: Tools
+    url: https://gofastmcp.com/servers/tools
+  - type: Documentation
+    name: Resources and Templates
+    url: https://gofastmcp.com/servers/resources
+  - type: Documentation
+    name: Prompts
+    url: https://gofastmcp.com/servers/prompts
+  - type: Documentation
+    name: Middleware
+    url: https://gofastmcp.com/servers/middleware
+  - type: Documentation
+    name: Dependency Injection
+    url: https://gofastmcp.com/servers/dependency-injection
+  - type: Documentation
+    name: Lifespan Management
+    url: https://gofastmcp.com/servers/lifespan
+  - type: Documentation
+    name: Context
+    url: https://gofastmcp.com/servers/context
+  - type: Documentation
+    name: Elicitation
+    url: https://gofastmcp.com/servers/elicitation
+  - type: Documentation
+    name: Progress Reporting
+    url: https://gofastmcp.com/servers/progress
+  - type: Documentation
+    name: Composition
+    url: https://gofastmcp.com/servers/composition
+  - type: Documentation
+    name: Testing
+    url: https://gofastmcp.com/servers/testing
+  - type: Documentation
+    name: OpenTelemetry
+    url: https://gofastmcp.com/servers/telemetry
+- aid: fastmcp:fastmcp-client
+  name: FastMCP Client
+  description: >-
+    The FastMCP Client is a Python client library for talking to any MCP server — local or remote —
+    with full protocol coverage. It supports calling tools, reading resources, getting prompts,
+    declaring roots, monitoring progress, server logging, notifications, user elicitation, LLM
+    sampling, and background tasks across stdio, Streamable HTTP, and SSE transports. Authentication
+    is built in via Bearer tokens, OAuth, and CIMD. A standalone `fastmcp-client` package is
+    available when only the client is needed.
+  humanURL: https://gofastmcp.com/clients/client
+  baseURL: ''
+  tags:
+  - MCP
+  - Client
+  - Python
+  - Library
+  properties:
+  - type: Documentation
+    url: https://gofastmcp.com/clients/client
+  - type: Documentation
+    name: Calling Tools
+    url: https://gofastmcp.com/clients/tools
+  - type: Documentation
+    name: Reading Resources
+    url: https://gofastmcp.com/clients/resources
+  - type: Documentation
+    name: Getting Prompts
+    url: https://gofastmcp.com/clients/prompts
+  - type: Documentation
+    name: Client Transports
+    url: https://gofastmcp.com/clients/transports
+  - type: Documentation
+    name: Bearer Token Authentication
+    url: https://gofastmcp.com/clients/auth/bearer
+  - type: Documentation
+    name: OAuth Authentication
+    url: https://gofastmcp.com/clients/auth/oauth
+  - type: Documentation
+    name: CIMD Authentication
+    url: https://gofastmcp.com/clients/auth/cimd
+  - type: Documentation
+    name: LLM Sampling
+    url: https://gofastmcp.com/clients/sampling
+  - type: Documentation
+    name: User Elicitation
+    url: https://gofastmcp.com/clients/elicitation
+  - type: Documentation
+    name: Client-Only Package
+    url: https://gofastmcp.com/clients/client-only-package
+- aid: fastmcp:fastmcp-apps
+  name: FastMCP Apps
+  description: >-
+    FastMCP Apps is the framework's runtime for building interactive applications rendered directly
+    inside MCP host conversations. Apps expose UI surfaces — approval flows, choice pickers, form
+    input, and file uploads — alongside prefab and low-level HTML/generative UIs, with `FastMCPApp`
+    as the primary entry point. Apps share the same transport and authentication stack as FastMCP
+    servers, enabling rich agent experiences across Claude Desktop, Claude Code, Cursor, and other
+    MCP-aware hosts.
+  humanURL: https://gofastmcp.com/apps/overview
+  baseURL: ''
+  tags:
+  - MCP
+  - Apps
+  - UI
+  - Interactive
+  - Python
+  properties:
+  - type: Documentation
+    url: https://gofastmcp.com/apps/overview
+  - type: Documentation
+    name: App Quickstart
+    url: https://gofastmcp.com/apps/quickstart
+  - type: Documentation
+    name: FastMCPApp
+    url: https://gofastmcp.com/apps/fastmcp-app
+  - type: Documentation
+    name: Architecture
+    url: https://gofastmcp.com/apps/architecture
+  - type: Documentation
+    name: Interactive Tools (Prefab)
+    url: https://gofastmcp.com/apps/prefab
+  - type: Documentation
+    name: Generative UI
+    url: https://gofastmcp.com/apps/generative
+  - type: Documentation
+    name: Custom HTML Apps
+    url: https://gofastmcp.com/apps/low-level
+  - type: Documentation
+    name: Approval Provider
+    url: https://gofastmcp.com/apps/providers/approval
+  - type: Documentation
+    name: Choice Provider
+    url: https://gofastmcp.com/apps/providers/choice
+  - type: Documentation
+    name: Form Input Provider
+    url: https://gofastmcp.com/apps/providers/form
+  - type: Documentation
+    name: File Upload Provider
+    url: https://gofastmcp.com/apps/providers/file-upload
+- aid: fastmcp:fastmcp-auth
+  name: FastMCP Authentication
+  description: >-
+    FastMCP ships a complete authentication and authorization layer for MCP servers. Servers can
+    verify tokens, terminate OAuth flows directly, or proxy to an external OAuth or OIDC provider,
+    and they can combine multiple authentication sources. Out-of-the-box providers cover Auth0,
+    AWS Cognito, Azure/Entra ID, GitHub, Google, Discord, Keycloak, OCI IAM, Supabase, WorkOS,
+    AuthKit, Descope, PropelAuth, and Scalekit. Authorization integrations include Permit.io and
+    Eunomia.
+  humanURL: https://gofastmcp.com/servers/auth/authentication
+  baseURL: ''
+  tags:
+  - MCP
+  - Authentication
+  - OAuth
+  - OIDC
+  - Authorization
+  - Security
+  properties:
+  - type: Documentation
+    name: Authentication Overview
+    url: https://gofastmcp.com/servers/auth/authentication
+  - type: Documentation
+    name: Token Verification
+    url: https://gofastmcp.com/servers/auth/token-verification
+  - type: Documentation
+    name: OAuth Proxy
+    url: https://gofastmcp.com/servers/auth/oauth-proxy
+  - type: Documentation
+    name: OIDC Proxy
+    url: https://gofastmcp.com/servers/auth/oidc-proxy
+  - type: Documentation
+    name: Multiple Auth Sources
+    url: https://gofastmcp.com/servers/auth/multi-auth
+  - type: Documentation
+    name: Remote OAuth
+    url: https://gofastmcp.com/servers/auth/remote-oauth
+  - type: Documentation
+    name: Full OAuth Server
+    url: https://gofastmcp.com/servers/auth/full-oauth-server
+  - type: Documentation
+    name: Authorization
+    url: https://gofastmcp.com/servers/authorization
+- aid: fastmcp:fastmcp-openapi
+  name: FastMCP OpenAPI and FastAPI Integration
+  description: >-
+    FastMCP can generate an MCP server directly from an existing OpenAPI 3.x description or a
+    FastAPI application, turning every HTTP operation into an MCP tool with auto-generated schemas
+    and validation. This makes FastMCP a one-step path from any existing REST API to an
+    agent-callable MCP surface, and is the recommended route for retrofitting MCP onto established
+    services without rewriting business logic.
+  humanURL: https://gofastmcp.com/integrations/openapi
+  baseURL: ''
+  tags:
+  - MCP
+  - OpenAPI
+  - FastAPI
+  - REST
+  - Integration
+  properties:
+  - type: Documentation
+    name: OpenAPI Integration
+    url: https://gofastmcp.com/integrations/openapi
+  - type: Documentation
+    name: FastAPI Integration
+    url: https://gofastmcp.com/integrations/fastapi
+- aid: fastmcp:fastmcp-cli
+  name: FastMCP CLI
+  description: >-
+    The FastMCP CLI is a developer command-line tool for running, inspecting, installing, and
+    debugging MCP servers built with FastMCP. It can launch servers under any transport, inspect
+    their tool/resource/prompt manifests, install servers into Claude Desktop, Claude Code, Cursor,
+    ChatGPT, and Gemini CLI, generate boilerplate, and manage authentication artifacts.
+  humanURL: https://gofastmcp.com/cli/overview
+  baseURL: ''
+  tags:
+  - MCP
+  - CLI
+  - Developer Tools
+  properties:
+  - type: Documentation
+    name: CLI Overview
+    url: https://gofastmcp.com/cli/overview
+  - type: Documentation
+    name: Running Servers
+    url: https://gofastmcp.com/cli/running
+  - type: Documentation
+    name: Client Commands
+    url: https://gofastmcp.com/cli/client
+  - type: Documentation
+    name: Installing MCP Servers
+    url: https://gofastmcp.com/cli/install-mcp
+  - type: Documentation
+    name: Inspecting Servers
+    url: https://gofastmcp.com/cli/inspecting
+  - type: Documentation
+    name: Generate CLI
+    url: https://gofastmcp.com/cli/generate-cli
+  - type: Documentation
+    name: Auth Utilities
+    url: https://gofastmcp.com/cli/auth
+common:
+- type: Website
+  url: https://gofastmcp.com
+- type: Portal
+  name: FastMCP Documentation
+  url: https://gofastmcp.com
+- type: GettingStarted
+  name: Welcome to FastMCP
+  url: https://gofastmcp.com/getting-started/welcome
+- type: Quickstart
+  url: https://gofastmcp.com/getting-started/quickstart
+- type: Installation
+  url: https://gofastmcp.com/getting-started/installation
+- type: Documentation
+  name: Upgrading from FastMCP 2
+  url: https://gofastmcp.com/getting-started/upgrading/from-fastmcp-2
+- type: Documentation
+  name: Upgrading from the Low-Level SDK
+  url: https://gofastmcp.com/getting-started/upgrading/from-low-level-sdk
+- type: Documentation
+  name: Upgrading from the MCP SDK
+  url: https://gofastmcp.com/getting-started/upgrading/from-mcp-sdk
+- type: ChangeLog
+  url: https://gofastmcp.com/changelog
+- type: ReleaseNotes
+  name: FastMCP Updates
+  url: https://gofastmcp.com/updates
+- type: FAQ
+  url: https://gofastmcp.com/more/faq
+- type: GitHubRepository
+  url: https://github.com/PrefectHQ/fastmcp
+- type: GitHubOrganization
+  url: https://github.com/PrefectHQ
+- type: SDK
+  name: FastMCP on PyPI
+  url: https://pypi.org/project/fastmcp
+- type: Forum
+  name: FastMCP Discord
+  url: https://discord.gg/uu8dJCgttd
+- type: Documentation
+  name: Deployment - Running Your Server
+  url: https://gofastmcp.com/deployment/running-server
+- type: Documentation
+  name: HTTP Deployment
+  url: https://gofastmcp.com/deployment/http
+- type: Documentation
+  name: Project Configuration
+  url: https://gofastmcp.com/deployment/server-configuration
+- type: Documentation
+  name: Sandboxed Agents
+  url: https://gofastmcp.com/deployment/sandboxed-agents
+- type: Documentation
+  name: Prefect Horizon
+  url: https://gofastmcp.com/deployment/prefect-horizon
+- type: Documentation
+  name: Contributing
+  url: https://gofastmcp.com/development/contributing
+- type: Documentation
+  name: Releases
+  url: https://gofastmcp.com/development/releases
+- type: Documentation
+  name: Tests
+  url: https://gofastmcp.com/development/tests
+- type: License
+  name: Apache License 2.0
+  url: https://github.com/PrefectHQ/fastmcp/blob/main/LICENSE
+- type: Features
+  data:
+  - name: Decorator-based tools, resources, and prompts
+    description: Turn Python functions into MCP tools, resources, and prompts with @mcp.tool / @mcp.resource / @mcp.prompt; schemas are auto-generated from type hints.
+  - name: FastMCP Server, Client, and Apps
+    description: Three composable surfaces — Server (expose), Client (consume), Apps (interactive UI) — sharing a single runtime, transport, and auth stack.
+  - name: Transport negotiation
+    description: Built-in support for stdio, Streamable HTTP, and SSE transports with zero boilerplate.
+  - name: First-class authentication
+    description: Token verification, OAuth Proxy, OIDC Proxy, remote OAuth, full OAuth server, multi-auth sources, and 15+ provider integrations (Auth0, Cognito, Azure/Entra, GitHub, Google, Discord, Keycloak, OCI, Supabase, WorkOS, AuthKit, Descope, PropelAuth, Scalekit).
+  - name: Authorization providers
+    description: Permit.io and Eunomia integrations for policy-driven authorization.
+  - name: OpenAPI and FastAPI import
+    description: Generate an MCP server directly from an OpenAPI spec or FastAPI app so existing REST APIs become agent-callable in one step.
+  - name: Server composition and proxying
+    description: Mount servers under namespaces, proxy to other MCP servers (including local, filesystem, and skills providers), and transform tools/prompts/resources between surfaces.
+  - name: Middleware and dependency injection
+    description: Wrap requests with middleware and inject runtime dependencies into tool handlers.
+  - name: Lifespan, context, logging, progress, elicitation
+    description: Full MCP protocol coverage including lifespan management, request context, structured logging, progress reporting, and user elicitation.
+  - name: LLM sampling and background tasks
+    description: Client APIs for LLM sampling against the host model and for spawning background tasks.
+  - name: OpenTelemetry instrumentation
+    description: Built-in OpenTelemetry tracing for servers.
+  - name: Tool transforms
+    description: Tool Transformation, Tool Search, Prompts-as-Tools, Resources-as-Tools, Namespace, Component Visibility, and Code Mode transforms.
+  - name: Pagination, versioning, storage backends, icons
+    description: Production-grade primitives for paginated responses, server versioning, pluggable storage backends, and component icons.
+  - name: CLI for running and installing servers
+    description: Run, inspect, install, and generate FastMCP servers and clients; one-line install into Claude Desktop, Claude Code, Cursor, ChatGPT, and Gemini CLI.
+  - name: Apps runtime
+    description: Approval, Choice, Form Input, and File Upload providers plus prefab, generative, and low-level HTML apps rendered inside MCP host conversations.
+  - name: Anthropic-adopted lineage
+    description: FastMCP 1.0 was incorporated into the official Anthropic MCP Python SDK; the standalone FastMCP project (now v3) continues as the leading Python framework, reportedly powering ~70% of MCP servers across all languages.
+  sources:
+  - https://gofastmcp.com
+  - https://gofastmcp.com/llms.txt
+  - https://github.com/PrefectHQ/fastmcp
+  updated: '2026-05-25'
+- type: UseCases
+  data:
+  - name: Wrap an existing REST API as an MCP server
+    description: Point FastMCP at an OpenAPI spec or FastAPI app to expose every operation as an MCP tool without rewriting handlers.
+  - name: Build agent-callable internal tools
+    description: Expose internal utilities (databases, search, ticketing, CI/CD, infra) to Claude, ChatGPT, Cursor, or any MCP host as governed tools.
+  - name: Ship interactive MCP apps
+    description: Use FastMCP Apps to render approval prompts, choice pickers, forms, and file uploads inside agent conversations.
+  - name: Proxy and compose third-party MCP servers
+    description: Aggregate multiple MCP servers behind a single namespaced surface with the proxy and namespace transforms.
+  - name: Add OAuth/OIDC to an MCP deployment
+    description: Drop in one of 15+ identity providers to authenticate real users into an MCP server without writing OAuth plumbing.
+  - name: Production deployment of MCP servers
+    description: Deploy MCP servers over HTTP with structured config, sandboxed agents, OpenTelemetry, and optional Prefect Horizon for managed runtime.
+  - name: Local agent tooling
+    description: Install FastMCP servers into Claude Desktop, Claude Code, Cursor, ChatGPT, or Gemini CLI via the FastMCP CLI for stdio-based local agent workflows.
+- type: Integrations
+  data:
+  - name: Anthropic API
+    description: First-party integration with the Anthropic Messages API; FastMCP 1.0 was adopted into the official Anthropic MCP Python SDK.
+  - name: Model Context Protocol
+    description: Reference implementation of the Anthropic-stewarded Model Context Protocol specification.
+  - name: OpenAI API
+    description: Connect FastMCP servers to OpenAI models and the OpenAI API.
+  - name: Google Gemini
+    description: Integration with Google Gemini SDK and Gemini CLI.
+  - name: Pydantic AI
+    description: Drop FastMCP servers into Pydantic AI agents.
+  - name: Claude Desktop
+    description: One-line install for FastMCP servers into Claude Desktop.
+  - name: Claude Code
+    description: Install FastMCP servers into Claude Code as MCP tools.
+  - name: Cursor
+    description: Install FastMCP servers into the Cursor editor.
+  - name: ChatGPT
+    description: Install FastMCP servers into ChatGPT.
+  - name: Goose
+    description: Integration with Block's Goose agent runtime.
+  - name: OpenAPI
+    description: Import any OpenAPI 3.x spec and serve it as an MCP server.
+  - name: FastAPI
+    description: Wrap a FastAPI app as an MCP server with one line.
+  - name: Auth0, AWS Cognito, Azure/Entra ID, GitHub, Google, Discord, Keycloak, OCI IAM, Supabase, WorkOS, AuthKit, Descope, PropelAuth, Scalekit
+    description: First-class OAuth provider integrations for authenticating MCP servers.
+  - name: Permit.io and Eunomia
+    description: Policy-driven authorization integrations.
+  - name: Prefect Horizon
+    description: Managed deployment platform for MCP servers from the FastMCP maintainers at PrefectHQ.
+  sources:
+  - https://gofastmcp.com/llms.txt
+  updated: '2026-05-25'
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
