@@ -16,7 +16,7 @@ description: >-
 kind: contract
 position: Producing
 access: 3rd-Party
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - MCP
 - Model Context Protocol
