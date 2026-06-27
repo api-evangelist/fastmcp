@@ -302,7 +302,7 @@ common:
 - type: GettingStarted
   name: Welcome to FastMCP
   url: https://gofastmcp.com/getting-started/welcome
-- type: Quickstart
+- type: GettingStarted
   url: https://gofastmcp.com/getting-started/quickstart
 - type: Installation
   url: https://gofastmcp.com/getting-started/installation
@@ -326,10 +326,10 @@ common:
   url: https://github.com/PrefectHQ/fastmcp
 - type: GitHubOrganization
   url: https://github.com/PrefectHQ
-- type: SDK
+- type: SDKs
   name: FastMCP on PyPI
   url: https://pypi.org/project/fastmcp
-- type: Forum
+- type: Forums
   name: FastMCP Discord
   url: https://discord.gg/uu8dJCgttd
 - type: Documentation
