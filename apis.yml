@@ -294,6 +294,8 @@ apis:
     name: Auth Utilities
     url: https://gofastmcp.com/cli/auth
 common:
+- type: DomainSecurity
+  url: security/fastmcp-domain-security.yml
 - type: Website
   url: https://gofastmcp.com
 - type: Portal
