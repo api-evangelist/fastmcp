@@ -1,0 +1,39 @@
+{
+  "name": "FastMCP",
+  "description": "The fast, Pythonic way to build MCP servers and clients.",
+  "url": "https://gofastmcp.com/",
+  "version": "1.0.0",
+  "protocolVersion": "0.3",
+  "preferredTransport": "HTTP+JSON",
+  "supportedInterfaces": [
+    {
+      "url": "https://gofastmcp.com/",
+      "protocolBinding": "HTTP+JSON",
+      "protocolVersion": "0.3"
+    }
+  ],
+  "provider": {
+    "url": "https://gofastmcp.com/",
+    "organization": "FastMCP"
+  },
+  "documentationUrl": "https://gofastmcp.com/",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "fast-mcp",
+      "name": "Fast Mcp",
+      "description": "Use when building MCP servers, clients, and applications. FastMCP is the standard framework for exposing tools, resources, and prompts to LLMs, connecting to MCP servers, and building interactive applications. Use this skill when agents need to create MCP servers, deploy them, integrate with LLM clients, or work with MCP protocol operations.",
+      "tags": [],
+      "url": "https://gofastmcp.com/.well-known/agent-skills/fast-mcp/skill.md"
+    }
+  ]
+}

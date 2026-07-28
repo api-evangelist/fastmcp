@@ -1,0 +1,33 @@
+generated: '2026-07-28'
+method: probed
+source: https://gofastmcp.com/.well-known/agent-card.json
+description: 'A2A Agent Card observed at /.well-known/agent-card.json on gofastmcp.com. Grade is measured
+  against the A2A 1.0.0 AgentCard object: ''conformant'' passes every structural check, ''near-conformant''
+  is correctly shaped but omits optional fields, ''flavored'' fails a hard check and is an agent card
+  in spirit rather than in schema. Provider-published by construction — served from the provider''s own
+  host; nothing here is derived or generated.'
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: gofastmcp.com
+conformance:
+  spec: A2A 1.0.0
+  grade: near-conformant
+  protocol_version: '0.3'
+  preferred_transport: HTTP+JSON
+  deviations:
+  - nonstandard-supportedInterfaces
+card:
+  name: FastMCP
+  description: The fast, Pythonic way to build MCP servers and clients.
+  url: https://gofastmcp.com/
+  version: 1.0.0
+  documentation_url: https://gofastmcp.com/
+  skills: 1
+  file: fastmcp-agent-card.json
+x-evidence:
+  fetched: '2026-07-28'
+  url: https://gofastmcp.com/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
+  note: Verbatim body saved alongside this manifest. No field inferred.

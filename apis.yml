@@ -294,6 +294,10 @@ apis:
     name: Auth Utilities
     url: https://gofastmcp.com/cli/auth
 common:
+- type: AgentCard
+  url: a2a/fastmcp-a2a.yml
+  name: A2A Agent Card
+  description: Agent Card served at /.well-known/agent-card.json (near-conformant against A2A 1.0.0).
 - type: DomainSecurity
   url: security/fastmcp-domain-security.yml
 - type: Website
