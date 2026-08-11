@@ -294,6 +294,16 @@ apis:
     name: Auth Utilities
     url: https://gofastmcp.com/cli/auth
 common:
+- type: IssueTracker
+  url: https://github.com/PrefectHQ/fastmcp/issues
+- type: Releases
+  url: https://github.com/PrefectHQ/fastmcp/releases
+- type: SecurityPolicy
+  url: https://github.com/PrefectHQ/fastmcp/blob/main/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/PrefectHQ/fastmcp/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/PrefectHQ/fastmcp/blob/main/CONTRIBUTING.md
 - type: AgentCard
   url: a2a/fastmcp-a2a.yml
   name: A2A Agent Card
