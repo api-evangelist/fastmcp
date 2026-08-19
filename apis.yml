@@ -32,7 +32,7 @@ tags:
 created: '2026-05-25'
 modified: '2026-05-25'
 url: https://raw.githubusercontent.com/api-evangelist/fastmcp/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: fastmcp:fastmcp-server
   name: FastMCP Server
