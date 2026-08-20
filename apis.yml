@@ -19,6 +19,17 @@ access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - MCP
+- Python
+- Framework
+- Open-Source
+- AI Agents
+- Tools
+- Resources
+- Prompts
+- LLMs
+- Anthropic
+tags_raw:
+- MCP
 - Model Context Protocol
 - Python
 - Framework
@@ -106,6 +117,11 @@ apis:
   baseURL: ''
   tags:
   - MCP
+  - Clients
+  - Python
+  - Library
+  tags_raw:
+  - MCP
   - Client
   - Python
   - Library
@@ -154,6 +170,12 @@ apis:
   humanURL: https://gofastmcp.com/apps/overview
   baseURL: ''
   tags:
+  - MCP
+  - Application
+  - UI
+  - Interactive
+  - Python
+  tags_raw:
   - MCP
   - Apps
   - UI
@@ -204,6 +226,12 @@ apis:
   humanURL: https://gofastmcp.com/servers/auth/authentication
   baseURL: ''
   tags:
+  - MCP
+  - Authentication
+  - OIDC
+  - Authorization
+  - Security
+  tags_raw:
   - MCP
   - Authentication
   - OAuth
