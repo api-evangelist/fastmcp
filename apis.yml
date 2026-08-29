@@ -14,6 +14,18 @@ description: >-
   and a client library and apps runtime for building interactive UIs rendered inside MCP host
   conversations.
 kind: contract
+deliveryModel:
+  model: library
+  license: Apache License 2.0
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 position: Producing
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
