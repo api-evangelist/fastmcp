@@ -1,0 +1,28 @@
+generated: '2026-09-11'
+method: probed
+source: https://gofastmcp.com/mcp
+status: published
+server:
+  name: fastmcp
+  transport: http
+  url: https://gofastmcp.com/mcp
+deployment:
+  mode: remote
+  endpoint: https://gofastmcp.com/mcp
+  verified: probed
+  probe: live
+  checked: '2026-09-11'
+  source: docs-check 2026-09-12 (endpoint found in the provider's own documentation, then probed)
+tools_count: 3
+tools:
+- name: search_fast_mcp
+  description: ''
+- name: query_docs_filesystem_fast_mcp
+  description: ''
+- name: submit_feedback
+  description: ''
+tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
+authorship: platform
+authorship_note: 'PLATFORM-AUTHORED: this tool shape is shared with at least one other provider in the
+  catalog, so it is a platform default appearing under this provider''s domain rather than an interface
+  this provider designed. Shared shape: (''query_docs_filesystem_*'', ''search_*'', ''submit_feedback'')'
