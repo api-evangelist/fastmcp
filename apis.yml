@@ -50,7 +50,7 @@ tags:
 - Tools
 - Resources
 - Prompts
-- LLMs
+- LLM
 - Anthropic
 tags_raw:
 - MCP
@@ -82,6 +82,14 @@ apis:
   humanURL: https://gofastmcp.com/servers/server
   baseURL: ''
   tags:
+  - MCP
+  - Servers
+  - Tools
+  - Resources
+  - Prompts
+  - Python
+  - Framework
+  tags_raw:
   - MCP
   - Server
   - Tools
