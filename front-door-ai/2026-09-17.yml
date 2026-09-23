@@ -1,0 +1,31 @@
+# Front Door AI Index — fastmcp — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: fastmcp
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: gofastmcp.com
+  final_host: gofastmcp.com
+  ownership: own
+  owner: fastmcp
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 39
+  host_score: 39
+  density: 45.83
+  words: 851
+  tiers:
+    agentic: 37
+    core: 2
+    model: 0
+  ambiguous: 3
+  top_terms:
+    MCP: 29
+    model context protocol: 4
+    agent: 3
+    llms.txt: 3
+    AI: 1
+    LLMs: 1
+    prompts: 1
