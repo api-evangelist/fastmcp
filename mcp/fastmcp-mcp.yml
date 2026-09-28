@@ -16,13 +16,21 @@ deployment:
 tools_count: 3
 tools:
 - name: search_fast_mcp
-  description: ''
+  description: Search across the FastMCP knowledge base to find relevant information, code examples, API
+    references, and guides. Use this tool when you need to answer questions about FastMCP, find specific
+    documentation, understand how features work, or l
 - name: query_docs_filesystem_fast_mcp
-  description: ''
+  description: Run a read-only shell-like query against a virtualized, in-memory filesystem rooted at
+    `/` that contains ONLY the FastMCP documentation pages. This is NOT a shell on any real machine —
+    nothing runs on the user's computer, the server host, o
 - name: submit_feedback
-  description: ''
+  description: Report a problem with this documentation site so the docs team can fix it. Use when a documentation
+    page is incorrect, outdated, confusing, incomplete, or has a broken example. This is for feedback
+    about the documentation content itself — n
 tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
 authorship: platform
 authorship_note: 'PLATFORM-AUTHORED: this tool shape is shared with at least one other provider in the
   catalog, so it is a platform default appearing under this provider''s domain rather than an interface
   this provider designed. Shared shape: (''query_docs_filesystem_*'', ''search_*'', ''submit_feedback'')'
+descriptions_source: live tools/list (authorship probe or saved capture); filled by backfill-tools-from-authorship.py
+  --descriptions, 2026-09-28
