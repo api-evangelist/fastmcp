@@ -41,17 +41,21 @@ accessModel:
 position: Producing
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+x-docs-platform: mintlify
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
 tags:
 - MCP
 - Python
 - Framework
-- Open-Source
+- Open Source
 - AI Agents
 - Tools
 - Resources
 - Prompts
 - LLM
 - Anthropic
+- A2A
 tags_raw:
 - MCP
 - Model Context Protocol
@@ -64,6 +68,8 @@ tags_raw:
 - Prompts
 - LLMs
 - Anthropic
+- Open-Source
+- A2A
 created: '2026-05-25'
 modified: '2026-05-25'
 url: https://raw.githubusercontent.com/api-evangelist/fastmcp/refs/heads/main/apis.yml
@@ -528,3 +534,10 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-a2a:
+  verified: true
+  probed: '2026-09-26'
+  url: "https://gofastmcp.com/.well-known/agent-card.json"
+  grade: "conformant"
+  protocol_version: "0.3"
+  control: 404
