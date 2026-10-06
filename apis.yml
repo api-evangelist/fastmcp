@@ -71,7 +71,7 @@ tags_raw:
 - Open-Source
 - A2A
 created: '2026-05-25'
-modified: '2026-05-25'
+modified: '2026-10-06'
 url: https://raw.githubusercontent.com/api-evangelist/fastmcp/refs/heads/main/apis.yml
 specificationVersion: '0.23'
 apis:
@@ -360,6 +360,8 @@ apis:
     name: Auth Utilities
     url: https://gofastmcp.com/cli/auth
 common:
+- url: https://blog.gofastmcp.com/rss
+  type: BlogRSS
 - type: IssueTracker
   url: https://github.com/PrefectHQ/fastmcp/issues
 - type: Releases
