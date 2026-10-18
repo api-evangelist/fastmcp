@@ -266,7 +266,7 @@ apis:
   tags:
   - MCP
   - Authentication
-  - OIDC
+  - OpenID Connect
   - Authorization
   - Security
   tags_raw:
