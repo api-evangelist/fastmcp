@@ -1,4 +1,4 @@
-# FastMCP (fastmcp)
+# FastMCP
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,126 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-FastMCP is the fast, Pythonic framework for building Model Context Protocol (MCP) servers, clients, and apps. Originally created by Jeremiah Lowin and maintained by PrefectHQ, FastMCP 1.0 was adopted into the official Anthropic MCP Python SDK in 2024, and the standalone FastMCP project (now at v3) remains the most widely used way to ship MCP servers in Python — the project reports powering roughly 70% of MCP servers across all languages.
+FastMCP is the fast, Pythonic framework for building Model Context Protocol (MCP) servers, clients, and apps. Originally created by Jeremiah Lowin and maintained by PrefectHQ, FastMCP 1.0 was adopted into the official Anthropic MCP Python SDK in 2024, and the standalone FastMCP project (now at v3) remains the most widely used way to ship MCP servers in Python — the project reports powering roughly 70% of MCP servers across all languages. FastMCP turns ordinary Python functions into MCP tools, resources, prompts, and apps via decorators, auto-generates JSON Schemas from type hints, handles transport negotiation (stdio, Streamable HTTP, SSE), and ships first-class OAuth/OIDC authentication, server composition and proxying, OpenAPI/FastAPI import, a CLI for running and installing servers into Claude Desktop / Claude Code / Cursor / ChatGPT / Gemini CLI / Goose, middleware, lifespan management, elicitation, sampling, progress reporting, OpenTelemetry, and a client library and apps runtime for building interactive UIs rendered inside MCP host conversations.
 
-FastMCP turns ordinary Python functions into MCP tools, resources, prompts, and apps via decorators, auto-generates JSON Schemas from type hints, handles transport negotiation (stdio, Streamable HTTP, SSE), and ships first-class OAuth/OIDC authentication, server composition and proxying, OpenAPI/FastAPI import, a CLI for running and installing servers into Claude Desktop / Claude Code / Cursor / ChatGPT / Gemini CLI / Goose, middleware, lifespan management, elicitation, sampling, progress reporting, OpenTelemetry, and a client library and apps runtime for building interactive UIs rendered inside MCP host conversations.
+**Areas:** MCP · Python · Framework · Open Source · AI Agents · Tools · Resources · Prompts · LLM · Anthropic · A2A
 
-**APIs.json:** [apis.yml](https://raw.githubusercontent.com/api-evangelist/fastmcp/refs/heads/main/apis.yml)
+## FastMCP on APIs.io
 
-## Scope
+Everything profiled for FastMCP is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fastmcp/](https://apis.io/providers/fastmcp/)** — or go straight to one of the APIs or properties below.
 
-- **Type:** Contract
-- **Position:** Producing
-- **Access:** 3rd-Party
-- **Repo Type:** opensource (Tier 2 — Python library)
-- **License:** Apache License 2.0
-- **Language:** Python (>= 3.10)
-- **Maintainer Org:** [PrefectHQ](https://github.com/PrefectHQ)
-- **Original Author:** Jeremiah Lowin ([@jlowin](https://github.com/jlowin))
-- **Anthropic Lineage:** FastMCP 1.0 was incorporated into the official [Model Context Protocol](https://github.com/modelcontextprotocol) Python SDK stewarded by Anthropic.
+### APIs (6)
 
-## Tags
+- [FastMCP Server](https://apis.io/apis/fastmcp/fastmcp-server/) — The FastMCP Server is the Python entry point for exposing tools, resources, prompts, and apps to any Model Context Protocol client. Developers instantiate a…
+- [FastMCP Client](https://apis.io/apis/fastmcp/fastmcp-client/) — The FastMCP Client is a Python client library for talking to any MCP server — local or remote — with full protocol coverage. It supports calling tools,…
+- [FastMCP Apps](https://apis.io/apis/fastmcp/fastmcp-apps/) — FastMCP Apps is the framework's runtime for building interactive applications rendered directly inside MCP host conversations. Apps expose UI surfaces —…
+- [FastMCP Authentication](https://apis.io/apis/fastmcp/fastmcp-auth/) — FastMCP ships a complete authentication and authorization layer for MCP servers. Servers can verify tokens, terminate OAuth flows directly, or proxy to an…
+- [FastMCP OpenAPI and FastAPI Integration](https://apis.io/apis/fastmcp/fastmcp-openapi/) — FastMCP can generate an MCP server directly from an existing OpenAPI 3.x description or a FastAPI application, turning every HTTP operation into an MCP tool…
+- [FastMCP CLI](https://apis.io/apis/fastmcp/fastmcp-cli/) — The FastMCP CLI is a developer command-line tool for running, inspecting, installing, and debugging MCP servers built with FastMCP. It can launch servers…
 
-- MCP
-- Model Context Protocol
-- Python
-- Framework
-- Open Source
-- AI Agents
-- Tools
-- Resources
-- Prompts
-- LLMs
-- Anthropic
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+#### MCP servers (1)
 
-## APIs
+Model Context Protocol servers that expose the API to agents.
 
-### FastMCP Server
+- [fastmcp](https://apis.io/servers/fastmcp/fastmcp/)
 
-The Python entry point for exposing tools, resources, prompts, and apps to any MCP client. Decorator-based registration, auto-generated schemas, dependency injection, middleware, lifespan management, context, structured logging, progress reporting, elicitation, authorization, component visibility, pagination, namespace transforms, and OpenTelemetry. Servers can be composed via mounting and proxying, and exposed over stdio, Streamable HTTP, or SSE transports.
+#### Security (1)
 
-**Docs:** [gofastmcp.com/servers/server](https://gofastmcp.com/servers/server)
+Authentication, trust centre, and vulnerability disclosure.
 
-### FastMCP Client
+- [Fastmcp Domain Security](https://apis.io/security/fastmcp/fastmcp-domain-security/)
 
-A Python client library for talking to any MCP server — local or remote — with full protocol coverage: calling tools, reading resources, getting prompts, declaring roots, monitoring progress, server logging, notifications, user elicitation, LLM sampling, and background tasks across stdio, Streamable HTTP, and SSE. Authentication via Bearer tokens, OAuth, and CIMD. A standalone `fastmcp-client` package is available when only the client is needed.
+## Where to find this API
 
-**Docs:** [gofastmcp.com/clients/client](https://gofastmcp.com/clients/client)
-
-### FastMCP Apps
-
-Runtime for building interactive applications rendered directly inside MCP host conversations: approval flows, choice pickers, form input, file uploads, plus prefab and low-level HTML/generative UIs.
-
-**Docs:** [gofastmcp.com/apps/overview](https://gofastmcp.com/apps/overview)
-
-### FastMCP Authentication
-
-A complete authentication and authorization layer for MCP servers: token verification, OAuth Proxy, OIDC Proxy, multi-auth sources, remote OAuth, and a full OAuth server. Provider integrations include Auth0, AWS Cognito, Azure/Entra ID, GitHub, Google, Discord, Keycloak, OCI IAM, Supabase, WorkOS, AuthKit, Descope, PropelAuth, and Scalekit. Authorization integrations cover Permit.io and Eunomia.
-
-**Docs:** [gofastmcp.com/servers/auth/authentication](https://gofastmcp.com/servers/auth/authentication)
-
-### FastMCP OpenAPI and FastAPI Integration
-
-Generate an MCP server directly from an existing OpenAPI 3.x description or a FastAPI application — every HTTP operation becomes an MCP tool with auto-generated schemas and validation. The fastest path from any existing REST API to an agent-callable MCP surface.
-
-**Docs:** [gofastmcp.com/integrations/openapi](https://gofastmcp.com/integrations/openapi) · [gofastmcp.com/integrations/fastapi](https://gofastmcp.com/integrations/fastapi)
-
-### FastMCP CLI
-
-The developer CLI for running, inspecting, installing, and debugging FastMCP servers. One-line install into Claude Desktop, Claude Code, Cursor, ChatGPT, and Gemini CLI.
-
-**Docs:** [gofastmcp.com/cli/overview](https://gofastmcp.com/cli/overview)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://gofastmcp.com)
-- [Quickstart](https://gofastmcp.com/getting-started/quickstart)
-- [Installation](https://gofastmcp.com/getting-started/installation)
+- [Documentation](https://gofastmcp.com/getting-started/upgrading/from-fastmcp-2)
+- [Getting started](https://gofastmcp.com/getting-started/welcome)
 - [Changelog](https://gofastmcp.com/changelog)
-- [FAQ](https://gofastmcp.com/more/faq)
-- [GitHub Repository](https://github.com/PrefectHQ/fastmcp)
-- [PyPI](https://pypi.org/project/fastmcp)
-- [Discord](https://discord.gg/uu8dJCgttd)
-- [HTTP Deployment](https://gofastmcp.com/deployment/http)
-- [Prefect Horizon (managed)](https://gofastmcp.com/deployment/prefect-horizon)
-- [Contributing](https://gofastmcp.com/development/contributing)
-- [License (Apache 2.0)](https://github.com/PrefectHQ/fastmcp/blob/main/LICENSE)
+- [GitHub](https://github.com/PrefectHQ)
 
-## Install
+## API Evangelist rating
 
-```bash
-uv pip install fastmcp
-# or
-pip install fastmcp
-```
+**Kin Score 18.2** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Hello, FastMCP
+| Facet | Score |
+|---|---|
+| Discoverability | 73.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 0.0 |
 
-```python
-from fastmcp import FastMCP
+**Agent readiness 5.6** — agent-aware
 
-mcp = FastMCP("demo")
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | near-conformant (partial credit) |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-@mcp.tool
-def add(a: int, b: int) -> int:
-    """Add two numbers."""
-    return a + b
+**Regulatory alignment 5.5** — Horizontal (data, software, accessibility, platform)
 
-if __name__ == "__main__":
-    mcp.run()
-```
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/fastmcp/](https://apis.io/providers/fastmcp/).
 
-## Why This Profile
+## How this profile is made
 
-FastMCP is the de-facto Python implementation of the Model Context Protocol — the open protocol Anthropic introduced for connecting LLMs to tools and data. With FastMCP 1.0 having been absorbed into the official Anthropic-stewarded MCP Python SDK, and FastMCP 3.x continuing as the actively maintained framework powering most MCP servers in the wild, this catalog entry captures the full developer surface: server, client, apps, authentication, OpenAPI/FastAPI import, and CLI — plus deployment, integrations, and the broader ecosystem.
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Maintainers
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for FastMCP: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-**FN:** Kin Lane
+## Open an issue
 
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fastmcp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
